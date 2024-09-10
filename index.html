@@ -3,14 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.45/moment-timezone-with-data-1970-2030.min.js"></script>
+    <script src="/Users/luanamarley/Desktop/shecodes2024/add-plus-timezone-dropdown/index.js"></script>
     <title>Homework - Time Zone Dropdown</title>
+    <style>
+      body {
+        background-color: #b2d6bc;
+        font-family: "roboto", sans-serif;
+      }
+
+      h1 {
+        font-family: "roboto", sans-serif;
+        font-size: 20px;
+        font-weight: normal;
+      }
+
+      .timezonedrop {
+        background: white;
+        max-width: 600px;
+        margin: 45px auto;
+        box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+        border-radius: 16px;
+        padding: 30px;
+      }
+    </style>
   </head>
   <body>
     <div class="timezonedrop">
       <h1>Homework Time Zone Dropdown</h1>
       <p></p>
-      <script src="/Users/luanamarley/Desktop/shecodes2024/add-plus-timezone-dropdown/style.css"></script>
-      <script src="/Users/luanamarley/Desktop/shecodes2024/add-plus-timezone-dropdown/index.js"></script>
+
+      <form action="#">
+        <label for="country">What is the time zone?</label>
+        <select id="country">
+          <option value="">choose an country</option>
+          <option value="Europe/Paris">🇫🇷 Paris, France</option>
+          <option value="Asia/Tokyo">🇯🇵 Tokyo, Japan</option>
+          <option value="Australia/Sydney">🇦🇺 Sydney, Australia</option>
+        </select>
+      </form>
+      <p id="timezoneDisplay"></p>
     </div>
   </body>
 </html>
