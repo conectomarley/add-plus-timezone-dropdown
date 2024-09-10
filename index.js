@@ -1,12 +1,14 @@
 function showtimezone(event) {
   const timezone = event.target.value;
-  if (timezone.length > 0) {
+  if (timezone) {
     const currentTime = moment()
       .tz(timezone)
-      .format("[It's] dddd, MMMM Do, YYYY LT [in] z");
+      .format("[It's] dddd, MMMM Do, YYYY LT");
     document.querySelector("#timezoneDisplay").innerHTML = currentTime;
     alert(currentTime);
   }
 }
-let countryselect = document.querySelector("#country");
-countryselect.addEventListener("change", showtimezone);
+document.addEventListener("DOMContentLoaded", function () {
+  let countryselect = document.querySelector("#country");
+  countryselect.addEventListener("change", showtimezone);
+});
